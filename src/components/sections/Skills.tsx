@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Cog, Code, Database, Cpu } from "lucide-react";
+import { Droplets, Zap, Cpu, Wrench } from "lucide-react";
 
 const Skills = () => {
   const ref = useRef(null);
@@ -8,51 +8,46 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      icon: Cog,
-      title: "Industrial Engineering",
-      description: "Core expertise in heavy industry systems",
+      icon: Droplets,
+      title: "Fluides & Thermique",
+      description: "Systèmes thermodynamiques et hydrauliques",
       skills: [
-        { name: "Fluid Mechanics", level: 95 },
-        { name: "Turbomachines", level: 90 },
-        { name: "Thermodynamics", level: 92 },
-        { name: "Pneumatics & Hydraulics", level: 88 },
-        { name: "Industrial Automation", level: 85 },
+        { name: "Mécanique des Fluides & Turbomachines", level: 95 },
+        { name: "Machines Hydrauliques & Pneumatiques", level: 92 },
+        { name: "Thermodynamique & Transfert de Chaleur", level: 94 },
+        { name: "Froid & Climatisation", level: 88 },
       ],
     },
     {
-      icon: Code,
-      title: "Software Development",
-      description: "Modern tech stack for building solutions",
+      icon: Zap,
+      title: "Électrique & Puissance",
+      description: "Réseaux et commande électrique industrielle",
       skills: [
-        { name: "Python", level: 90 },
-        { name: "C++", level: 85 },
-        { name: "JavaScript/React", level: 88 },
-        { name: "Web Development", level: 85 },
-        { name: "Embedded Systems", level: 80 },
+        { name: "Machines Électriques & Commande", level: 90 },
+        { name: "Électronique de Puissance", level: 88 },
+        { name: "Réseaux Électriques Industriels", level: 86 },
+        { name: "Schémas & Appareillage", level: 85 },
       ],
     },
     {
       icon: Cpu,
-      title: "AI & Machine Learning",
-      description: "Intelligent solutions for industry",
+      title: "Automatisation & Digital",
+      description: "Solutions intelligentes pour l'industrie",
       skills: [
-        { name: "Computer Vision", level: 88 },
-        { name: "TensorFlow/PyTorch", level: 85 },
-        { name: "Edge AI", level: 82 },
-        { name: "Data Analytics", level: 86 },
-        { name: "Predictive Models", level: 84 },
+        { name: "Automatisme (API) & Informatique Industrielle", level: 92 },
+        { name: "Python Avancé & Microprocesseurs", level: 90 },
+        { name: "Contrôle Industriel & Capteurs", level: 88 },
+        { name: "Modélisation & Simulation", level: 85 },
       ],
     },
     {
-      icon: Database,
-      title: "IoT & Systems",
-      description: "Connected intelligent devices",
+      icon: Wrench,
+      title: "Maintenance & Gestion",
+      description: "Fiabilité et sécurité industrielle",
       skills: [
-        { name: "IoT Architecture", level: 90 },
-        { name: "Sensor Integration", level: 88 },
-        { name: "SCADA Systems", level: 85 },
-        { name: "Cloud Platforms", level: 82 },
-        { name: "Protocol Design", level: 80 },
+        { name: "Gestion de Maintenance (MBF) & Diagnostic", level: 90 },
+        { name: "Sécurité Industrielle", level: 88 },
+        { name: "Conception (CAO/FAO)", level: 86 },
       ],
     },
   ];
