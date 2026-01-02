@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 import { Camera, Zap, ShoppingCart, ExternalLink, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -11,6 +12,7 @@ const Projects = () => {
     {
       icon: Camera,
       title: "AI Surveillance Cam",
+      slug: "ai-surveillance",
       category: "Computer Vision • Agriculture • Security",
       description:
         "Smart security solution for agriculture & industry using behavioral recognition algorithms. Detects anomalies, tracks movement patterns, and sends real-time alerts.",
@@ -20,6 +22,7 @@ const Projects = () => {
     {
       icon: Zap,
       title: "IoT Energy Saver",
+      slug: "iot-energy",
       category: "IoT • Energy • Predictive Analytics",
       description:
         "A smart device to monitor consumption and predict electricity bills for industrial efficiency. Reduces energy waste by up to 30% through intelligent automation.",
@@ -29,6 +32,7 @@ const Projects = () => {
     {
       icon: ShoppingCart,
       title: "Nawras Platform",
+      slug: "nawras",
       category: "E-commerce • SaaS • Digital Transformation",
       description:
         "A comprehensive E-commerce solution enabling digital transformation for local merchants. Simplifies online presence with integrated payment and inventory management.",
@@ -114,10 +118,12 @@ const Projects = () => {
                   </div>
 
                   {/* CTA */}
-                  <Button variant="ghost" size="sm" className="group/btn p-0 h-auto text-primary hover:bg-transparent">
-                    Learn More
-                    <ExternalLink className="w-4 h-4 ml-2 transition-transform group-hover/btn:translate-x-1" />
-                  </Button>
+                  <Link to={`/project/${project.slug}`}>
+                    <Button variant="ghost" size="sm" className="group/btn p-0 h-auto text-primary hover:bg-transparent">
+                      Learn More
+                      <ExternalLink className="w-4 h-4 ml-2 transition-transform group-hover/btn:translate-x-1" />
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </motion.div>
