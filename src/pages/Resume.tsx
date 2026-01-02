@@ -71,9 +71,30 @@ const Resume = () => {
   };
 
   const certifications = [
-    { name: "AWS Certified Solutions Architect", issuer: "Amazon Web Services", year: "2023" },
-    { name: "TensorFlow Developer Certificate", issuer: "Google", year: "2022" },
-    { name: "Certified IoT Professional", issuer: "CertNexus", year: "2021" }
+    { 
+      name: "Startup Label - Caméra Intelligente", 
+      issuer: "Ministry of Economy, Knowledge & Startups", 
+      year: "2023",
+      description: "AI-powered computer vision system for behavioral analysis and industrial/agricultural security"
+    },
+    { 
+      name: "Startup Label - Optimisation Énergétique", 
+      issuer: "Ministry of Economy, Knowledge & Startups", 
+      year: "2025",
+      description: "Smart IoT device for monitoring electrical consumption and predicting bills for industrial efficiency"
+    },
+    { 
+      name: "Startup Label - Plateforme Nawras", 
+      issuer: "Ministry of Economy, Knowledge & Startups", 
+      year: "2026",
+      description: "Comprehensive SaaS e-commerce solution enabling digital transformation for merchants"
+    },
+    { 
+      name: "Master's Degree in Electromechanical Engineering", 
+      issuer: "University of Biskra", 
+      year: "2023",
+      description: "Specialized in industrial systems, fluid mechanics, and turbomachines"
+    }
   ];
 
   return (
@@ -250,13 +271,13 @@ const Resume = () => {
               </div>
             </div>
 
-            {/* Certifications */}
+            {/* Certifications & Awards */}
             <div className="p-6 rounded-2xl bg-card border border-border">
               <div className="flex items-center gap-3 mb-6">
                 <div className="p-2 rounded-lg bg-primary/10">
                   <Award className="w-5 h-5 text-primary" />
                 </div>
-                <h2 className="text-xl font-semibold">Certifications</h2>
+                <h2 className="text-xl font-semibold">Awards & Certifications</h2>
               </div>
               <div className="space-y-4">
                 {certifications.map((cert, index) => (
@@ -265,10 +286,14 @@ const Resume = () => {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.9 + index * 0.1 }}
-                    className="p-4 rounded-xl bg-secondary/50 hover:bg-secondary transition-colors"
+                    className="p-4 rounded-xl bg-secondary/50 hover:bg-secondary transition-colors group"
                   >
-                    <h3 className="font-medium text-sm">{cert.name}</h3>
-                    <p className="text-xs text-muted-foreground mt-1">{cert.issuer} • {cert.year}</p>
+                    <div className="flex items-start justify-between gap-2">
+                      <h3 className="font-medium text-sm group-hover:text-primary transition-colors">{cert.name}</h3>
+                      <span className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full flex-shrink-0">{cert.year}</span>
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-1">{cert.issuer}</p>
+                    <p className="text-xs text-muted-foreground/80 mt-2 leading-relaxed">{cert.description}</p>
                   </motion.div>
                 ))}
               </div>
