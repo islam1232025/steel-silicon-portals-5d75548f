@@ -2,10 +2,13 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,13 +53,20 @@ const Navbar = () => {
             {navLinks.map((link) => (
               <a
                 key={link.label}
-                href={link.href}
+                href={isHomePage ? link.href : `/${link.href}`}
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors relative group"
               >
                 {link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
               </a>
             ))}
+            <Link
+              to="/resume"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors relative group"
+            >
+              Resume
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
+            </Link>
           </div>
 
           {/* CTA Button */}
@@ -92,13 +102,20 @@ const Navbar = () => {
             {navLinks.map((link) => (
               <a
                 key={link.label}
-                href={link.href}
+                href={isHomePage ? link.href : `/${link.href}`}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="block text-lg font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 {link.label}
               </a>
             ))}
+            <Link
+              to="/resume"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="block text-lg font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Resume
+            </Link>
             <Button variant="hero" size="lg" className="w-full mt-4">
               Hire Me
             </Button>
