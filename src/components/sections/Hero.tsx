@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Download, Briefcase } from "lucide-react";
+import { ArrowDown, FileText, Briefcase } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import NetworkBackground from "@/components/NetworkBackground";
 import { useTypewriter } from "@/hooks/useTypewriter";
@@ -83,12 +84,12 @@ const Hero = () => {
                 <ArrowDown className="w-4 h-4 transition-transform group-hover:translate-y-1" />
               </Button>
             </a>
-            <a href="/Islam_Saker_CV.pdf" download="Islam_Saker_CV.pdf">
+            <Link to="/resume">
               <Button variant="heroOutline" size="lg" className="group">
-                <Download className="w-5 h-5" />
-                Download CV
+                <FileText className="w-5 h-5" />
+                View Resume
               </Button>
-            </a>
+            </Link>
           </motion.div>
         </motion.div>
 
