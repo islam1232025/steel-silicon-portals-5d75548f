@@ -6,39 +6,39 @@ import { Button } from "@/components/ui/button";
 const Resume = () => {
   const experiences = [
     {
+      title: "Co-Founder",
+      company: "Nawras Platform",
+      period: "2026",
+      location: "Algeria",
+      description: "أحد المؤسسين لمنصة نورس المتخصصة في ربط المنصات الرقمية للتجار الرقميين وتوفير طرق إدارة ذكية لدعم التجارة الإلكترونية.",
+      achievements: [
+        "ربط المنصات الرقمية للتجار الرقميين",
+        "توفير أدوات إدارة ذكية للتجارة الإلكترونية",
+        "دعم التجار في تطوير أعمالهم الرقمية"
+      ]
+    },
+    {
+      title: "Startup Label (Second Label)",
+      company: "Ministry of Economy, Knowledge & Startups",
+      period: "2025",
+      location: "Algeria",
+      description: "حصل على شهادة لابل ثانية من وزارة الاقتصاد والمعرفة والمؤسسات الناشئة لتطوير مشروع مراقبة ذكي للطاقة الكهربائية.",
+      achievements: [
+        "نظام مراقبة ذكي مرتبط بالهواتف الذكية",
+        "إدارة واقتصاد الطاقة الكهربائية",
+        "معرفة سعر الفاتورة وكمية الاستهلاك قبل وصول الفاتورة"
+      ]
+    },
+    {
       title: "Founder & CEO",
       company: "Startup Label",
-      period: "2022 - Present",
+      period: "2023",
       location: "Algeria",
-      description: "Leading a tech startup focused on IoT solutions and AI-powered industrial systems.",
+      description: "تأسيس شركة ناشئة متخصصة في حلول إنترنت الأشياء والأنظمة الصناعية المدعومة بالذكاء الاصطناعي.",
       achievements: [
-        "Developed AI-powered surveillance systems for industrial facilities",
-        "Created IoT energy monitoring solutions reducing costs by 30%",
-        "Led a team of 5 engineers on multiple successful projects"
-      ]
-    },
-    {
-      title: "Electromechanical Engineer",
-      company: "Industrial Solutions Co.",
-      period: "2020 - 2022",
-      location: "Algeria",
-      description: "Designed and implemented electromechanical systems for manufacturing plants.",
-      achievements: [
-        "Automated production lines increasing efficiency by 40%",
-        "Implemented predictive maintenance systems",
-        "Reduced downtime by 25% through smart monitoring"
-      ]
-    },
-    {
-      title: "IoT Developer",
-      company: "Tech Innovations",
-      period: "2018 - 2020",
-      location: "Algeria",
-      description: "Developed IoT solutions for smart buildings and industrial applications.",
-      achievements: [
-        "Built custom sensor networks for environmental monitoring",
-        "Developed real-time dashboards for data visualization",
-        "Integrated ML models for anomaly detection"
+        "تطوير أنظمة مراقبة ذكية للمنشآت الصناعية",
+        "إنشاء حلول مراقبة الطاقة بتقنية IoT",
+        "قيادة فريق من المهندسين في مشاريع متعددة"
       ]
     }
   ];
@@ -46,15 +46,15 @@ const Resume = () => {
   const education = [
     {
       degree: "Master's in Electromechanical Engineering",
-      school: "University of Science and Technology",
-      period: "2016 - 2018",
-      description: "Specialized in automation and control systems"
+      school: "University of Biskra",
+      period: "2021 - 2023",
+      description: "تخصص في الأتمتة وأنظمة التحكم"
     },
     {
-      degree: "Bachelor's in Electrical Engineering",
-      school: "University of Science and Technology",
-      period: "2013 - 2016",
-      description: "Focus on power systems and electronics"
+      degree: "Bachelor's in Electromechanical Engineering",
+      school: "University of Biskra",
+      period: "2016 - 2021",
+      description: "شهادة ليسانس (2016-2018) ثم عطلة أكاديمية لمدة سنتين قبل العودة وإكمال الشهادة سنة 2021"
     }
   ];
 
