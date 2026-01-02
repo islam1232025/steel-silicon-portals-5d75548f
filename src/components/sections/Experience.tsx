@@ -9,39 +9,48 @@ const Experience = () => {
   const timeline = [
     {
       icon: GraduationCap,
-      year: "2018 - 2023",
-      title: "Master in Electromechanics",
+      year: "2016 - 2021",
+      title: "Bachelor's in Electromechanics",
       organization: "University of Biskra",
       description:
-        "Specialized in industrial systems, fluid mechanics, and turbomachines. Developed strong foundation in thermodynamics and mechanical engineering.",
+        "Completed Bachelor's degree (2016-2018), followed by a 2-year academic leave before returning to complete the degree in 2021.",
+      type: "education",
+    },
+    {
+      icon: GraduationCap,
+      year: "2021 - 2023",
+      title: "Master's in Electromechanics",
+      organization: "University of Biskra",
+      description:
+        "Specialized in industrial systems, fluid mechanics, and turbomachines. Developed strong foundation in automation and control systems.",
       type: "education",
     },
     {
       icon: Award,
-      year: "2022",
+      year: "2023",
       title: "Startup Label Certification",
-      organization: "Algerian Ministry of Startups",
+      organization: "Ministry of Economy, Knowledge & Startups",
       description:
-        "Awarded prestigious startup label for innovative projects combining AI with industrial applications. Recognition for entrepreneurial excellence.",
+        "Founded a tech startup focused on IoT solutions and AI-powered industrial systems. Awarded prestigious startup label for innovative projects.",
+      type: "achievement",
+    },
+    {
+      icon: Award,
+      year: "2025",
+      title: "Second Startup Label",
+      organization: "Ministry of Economy, Knowledge & Startups",
+      description:
+        "Awarded second Startup Label for developing a smart energy monitoring system connected to smartphones, enabling electricity cost optimization and consumption tracking.",
       type: "achievement",
     },
     {
       icon: Rocket,
-      year: "2022 - 2024",
-      title: "Founder & Lead Developer",
-      organization: "Tech Startup Ventures",
+      year: "2026",
+      title: "Co-Founder",
+      organization: "Nawras Platform",
       description:
-        "Founded and developed three innovative projects: AI Surveillance System, IoT Energy Saver, and Nawras E-commerce Platform.",
+        "Co-founded Nawras, a platform specialized in connecting digital platforms for e-commerce merchants and providing smart management tools to support online businesses.",
       type: "startup",
-    },
-    {
-      icon: Briefcase,
-      year: "2024 - Present",
-      title: "Electromechanical Engineer",
-      organization: "Seeking Industrial Partnership",
-      description:
-        "Actively seeking opportunities to bring AI-powered innovation to mineral water and cement manufacturing facilities.",
-      type: "current",
     },
   ];
 
