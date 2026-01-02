@@ -10,23 +10,23 @@ const Resume = () => {
       company: "Nawras Platform",
       period: "2026",
       location: "Algeria",
-      description: "أحد المؤسسين لمنصة نورس المتخصصة في ربط المنصات الرقمية للتجار الرقميين وتوفير طرق إدارة ذكية لدعم التجارة الإلكترونية.",
+      description: "Co-founded Nawras, a platform specialized in connecting digital platforms for e-commerce merchants and providing smart management tools to support online businesses.",
       achievements: [
-        "ربط المنصات الرقمية للتجار الرقميين",
-        "توفير أدوات إدارة ذكية للتجارة الإلكترونية",
-        "دعم التجار في تطوير أعمالهم الرقمية"
+        "Integrated digital platforms for e-commerce merchants",
+        "Developed smart management tools for online commerce",
+        "Empowered merchants to grow their digital businesses"
       ]
     },
     {
-      title: "Startup Label (Second Label)",
+      title: "Startup Label Holder (Second Label)",
       company: "Ministry of Economy, Knowledge & Startups",
       period: "2025",
       location: "Algeria",
-      description: "حصل على شهادة لابل ثانية من وزارة الاقتصاد والمعرفة والمؤسسات الناشئة لتطوير مشروع مراقبة ذكي للطاقة الكهربائية.",
+      description: "Awarded the second Startup Label by the Ministry of Economy, Knowledge, and Startups for developing a smart energy monitoring system.",
       achievements: [
-        "نظام مراقبة ذكي مرتبط بالهواتف الذكية",
-        "إدارة واقتصاد الطاقة الكهربائية",
-        "معرفة سعر الفاتورة وكمية الاستهلاك قبل وصول الفاتورة"
+        "Built smart monitoring system connected to smartphones",
+        "Enabled energy management and electricity cost optimization",
+        "Provided bill estimation and consumption tracking before invoice arrival"
       ]
     },
     {
@@ -34,11 +34,11 @@ const Resume = () => {
       company: "Startup Label",
       period: "2023",
       location: "Algeria",
-      description: "تأسيس شركة ناشئة متخصصة في حلول إنترنت الأشياء والأنظمة الصناعية المدعومة بالذكاء الاصطناعي.",
+      description: "Founded a tech startup focused on IoT solutions and AI-powered industrial systems.",
       achievements: [
-        "تطوير أنظمة مراقبة ذكية للمنشآت الصناعية",
-        "إنشاء حلول مراقبة الطاقة بتقنية IoT",
-        "قيادة فريق من المهندسين في مشاريع متعددة"
+        "Developed AI-powered surveillance systems for industrial facilities",
+        "Created IoT energy monitoring solutions",
+        "Led a team of engineers on multiple successful projects"
       ]
     }
   ];
@@ -48,13 +48,13 @@ const Resume = () => {
       degree: "Master's in Electromechanical Engineering",
       school: "University of Biskra",
       period: "2021 - 2023",
-      description: "تخصص في الأتمتة وأنظمة التحكم"
+      description: "Specialized in automation and control systems"
     },
     {
       degree: "Bachelor's in Electromechanical Engineering",
       school: "University of Biskra",
       period: "2016 - 2021",
-      description: "شهادة ليسانس (2016-2018) ثم عطلة أكاديمية لمدة سنتين قبل العودة وإكمال الشهادة سنة 2021"
+      description: "Completed Bachelor's degree (2016-2018), followed by a 2-year academic leave before returning to complete the degree in 2021"
     }
   ];
 
