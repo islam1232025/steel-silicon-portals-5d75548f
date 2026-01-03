@@ -71,9 +71,11 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="hero" size="default">
-              Hire Me
-            </Button>
+            <a href={isHomePage ? "#contact" : "/#contact"}>
+              <Button variant="hero" size="default">
+                Hire Me
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -116,9 +118,11 @@ const Navbar = () => {
             >
               Resume
             </Link>
-            <Button variant="hero" size="lg" className="w-full mt-4">
-              Hire Me
-            </Button>
+            <a href={isHomePage ? "#contact" : "/#contact"} onClick={() => setIsMobileMenuOpen(false)}>
+              <Button variant="hero" size="lg" className="w-full mt-4">
+                Hire Me
+              </Button>
+            </a>
           </div>
         </motion.div>
       )}
