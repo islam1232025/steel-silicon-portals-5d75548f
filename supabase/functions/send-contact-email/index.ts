@@ -1,6 +1,7 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 
-const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
+const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY") ?? "";
+const OWNER_EMAIL = "islam.sk544@gmail.com";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -10,21 +11,39 @@ const corsHeaders = {
 
 interface ContactEmailRequest {
   name: string;
-  email: string;
+  email: string; // sender email (customer)
   subject: string;
   message: string;
 }
 
+const isValidEmail = (value: string) =>
+  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+
+const clamp = (value: string, max: number) => value.trim().slice(0, max);
+
 const handler = async (req: Request): Promise<Response> => {
-  // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
-    const { name, email, subject, message }: ContactEmailRequest = await req.json();
+    if (!RESEND_API_KEY) {
+      throw new Error("Missing RESEND_API_KEY");
+    }
 
-    console.log("Received contact form submission:", { name, email, subject });
+    const body = (await req.json()) as Partial<ContactEmailRequest>;
+
+    const name = clamp(String(body.name ?? ""), 100);
+    const email = clamp(String(body.email ?? ""), 255);
+    const subject = clamp(String(body.subject ?? ""), 150);
+    const message = clamp(String(body.message ?? ""), 4000);
+
+    if (!name) throw new Error("Name is required");
+    if (!email || !isValidEmail(email)) throw new Error("Valid email is required");
+    if (!subject) throw new Error("Subject is required");
+    if (!message) throw new Error("Message is required");
+
+    console.log("Contact submission received", { subject });
 
     // Send email using Resend API directly
     const res = await fetch("https://api.resend.com/emails", {
@@ -35,7 +54,8 @@ const handler = async (req: Request): Promise<Response> => {
       },
       body: JSON.stringify({
         from: "Portfolio Contact <onboarding@resend.dev>",
-        to: ["islam.sk544@gmail.com"],
+        to: [OWNER_EMAIL],
+        reply_to: email,
         subject: `New Contact: ${subject}`,
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
@@ -55,7 +75,7 @@ const handler = async (req: Request): Promise<Response> => {
             </div>
             
             <p style="color: #9ca3af; font-size: 12px; margin-top: 20px; text-align: center;">
-              This message was sent from your portfolio contact form.
+              Reply-to will be set to the sender email above.
             </p>
           </div>
         `,

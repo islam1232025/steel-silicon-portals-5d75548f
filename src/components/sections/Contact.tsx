@@ -159,13 +159,13 @@ const Contact = () => {
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="email" className="text-sm font-medium text-foreground">
-                    Email
+                    Your Email
                   </label>
                   <Input
                     id="email"
                     name="email"
                     type="email"
-                    placeholder="your@email.com"
+                    placeholder="your@email.com (so I can reply)"
                     required
                     className="bg-secondary/50 border-border focus:border-primary"
                   />
