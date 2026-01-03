@@ -7,7 +7,9 @@
       // Single Page Apps for GitHub Pages
       // https://github.com/rafgraph/spa-github-pages
       // This script redirects all 404s to index.html for client-side routing
-      var pathSegmentsToKeep = 1;
+      // Set to 0 for custom domains or GitHub Enterprise
+      // Set to 1 for project sites (username.github.io/repo-name)
+      var pathSegmentsToKeep = 0;
 
       var l = window.location;
       l.replace(
