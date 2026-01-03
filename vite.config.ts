@@ -5,6 +5,8 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  // Base URL for GitHub Pages - change 'islam-saker-portfolio' to your repo name
+  base: mode === "production" ? "/islam-saker-portfolio/" : "/",
   server: {
     host: "::",
     port: 8080,
@@ -14,5 +16,8 @@ export default defineConfig(({ mode }) => ({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+  },
+  build: {
+    outDir: "dist",
   },
 }));
