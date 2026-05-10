@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Droplets, Zap, Cpu, Wrench } from "lucide-react";
+import { Droplets, Zap, Cpu, Wrench, Cable, Plug } from "lucide-react";
 
 const Skills = () => {
   const ref = useRef(null);
@@ -19,24 +19,24 @@ const Skills = () => {
       ],
     },
     {
-      icon: Zap,
-      title: "Electrical & Power",
-      description: "Industrial electrical networks and control",
+      icon: Cable,
+      title: "Electrical Power Systems",
+      description: "Low / Medium Voltage networks for cable industry",
       skills: [
-        { name: "Electrical Machines & Control", level: 90 },
-        { name: "Power Electronics", level: 88 },
-        { name: "Industrial Electrical Networks", level: 86 },
-        { name: "Schematics & Switchgear", level: 85 },
+        { name: "Electrical Power Systems (Low/Medium Voltage)", level: 92 },
+        { name: "Power Distribution & Cable Networks", level: 90 },
+        { name: "Power Electronics & Switchgear", level: 88 },
+        { name: "Electrical Machines & Drives", level: 90 },
       ],
     },
     {
       icon: Cpu,
-      title: "Automation & Digital",
-      description: "Intelligent solutions for industry",
+      title: "Industrial Automation",
+      description: "PLC / SCADA solutions for production lines",
       skills: [
-        { name: "Automation (PLCs) & Industrial Computing", level: 92 },
+        { name: "Advanced Industrial Automation (PLC/SCADA)", level: 93 },
+        { name: "Industrial Control & Sensors", level: 90 },
         { name: "Advanced Python & Microprocessors", level: 90 },
-        { name: "Industrial Control & Sensors", level: 88 },
         { name: "Modeling & Simulation", level: 85 },
       ],
     },

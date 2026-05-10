@@ -13,10 +13,10 @@ const Projects = () => {
       icon: Camera,
       title: "AI Surveillance Cam",
       slug: "ai-surveillance",
-      category: "Computer Vision • Agriculture • Security",
+      category: "Computer Vision • Quality Control • Industry",
       description:
-        "Smart security solution for agriculture & industry using behavioral recognition algorithms. Detects anomalies, tracks movement patterns, and sends real-time alerts.",
-      features: ["Behavioral Recognition", "Real-time Alerts", "Edge Computing"],
+        "Smart vision system for industrial production lines, enabling automated quality control and surface defect detection on cables and manufactured goods. Detects anomalies in real time and triggers instant alerts to minimize defective output.",
+      features: ["Automated Quality Control", "Surface Defect Detection", "Real-time Production Alerts"],
       gradient: "from-blue-500/20 to-cyan-500/20",
     },
     {
