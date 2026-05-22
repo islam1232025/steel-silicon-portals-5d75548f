@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { KeyRound, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 
@@ -49,7 +49,7 @@ const Navbar = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-5 lg:gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.label}
@@ -69,9 +69,11 @@ const Navbar = () => {
             </Link>
             <Link
               to="/counter"
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors relative group"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors relative group"
+              aria-label="خاص"
             >
-              Private
+              <KeyRound className="h-4 w-4 text-primary" aria-hidden="true" />
+              <span>خاص</span>
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
             </Link>
           </div>
@@ -128,9 +130,10 @@ const Navbar = () => {
             <Link
               to="/counter"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block text-lg font-medium text-muted-foreground hover:text-foreground transition-colors"
+              className="flex items-center gap-2 text-lg font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
-              Private
+              <KeyRound className="h-5 w-5 text-primary" aria-hidden="true" />
+              <span>خاص</span>
             </Link>
             <a href={isHomePage ? "#contact" : "/#contact"} onClick={() => setIsMobileMenuOpen(false)}>
               <Button variant="hero" size="lg" className="w-full mt-4">
