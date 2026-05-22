@@ -67,6 +67,13 @@ const Navbar = () => {
               Resume
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
             </Link>
+            <Link
+              to="/counter"
+              aria-label="Private"
+              className="text-muted-foreground/40 hover:text-foreground transition-colors"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-current inline-block" />
+            </Link>
           </div>
 
           {/* CTA Button */}
@@ -117,6 +124,13 @@ const Navbar = () => {
               className="block text-lg font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               Resume
+            </Link>
+            <Link
+              to="/counter"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="block text-lg font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Private
             </Link>
             <a href={isHomePage ? "#contact" : "/#contact"} onClick={() => setIsMobileMenuOpen(false)}>
               <Button variant="hero" size="lg" className="w-full mt-4">

@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import ProjectDetail from "./pages/ProjectDetail";
 import Resume from "./pages/Resume";
 import NotFound from "./pages/NotFound";
+import Counter from "./pages/Counter";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/project/:slug" element={<ProjectDetail />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="/counter" element={<Counter />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
